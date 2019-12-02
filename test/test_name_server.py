@@ -6,7 +6,7 @@ import requests
 import re
 
 class TestName(unittest.TestCase):
-    url = os.getenv('SERVICE_URL', 'http://127.0.0.1:8889')
+    url = os.getenv('SERVICE_URL', 'http://127.0.0.1:8080')
 
     def test_response_format(self):
         response = requests.get(self.url, timeout=1)
