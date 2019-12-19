@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t hoeghh/name:1.0 ./app
+docker build -t "$usern/name:1.0" ./app
