@@ -23,13 +23,13 @@ class TestName(unittest.TestCase):
         self.assertTrue(re.match('^[A-Z]{1}[a-z]+$', response.text))
 
     def test_request_metric(self):
-        response = requests.get(self.url, timeout=1) # Dummy, skip non-reported zero metric
+        response = requests.get(self.url, timeout=10) # Dummy, skip non-reported zero metric
         m1 = self.get_metric('sentence_requests_total')
         self.assertTrue(len(m1)==1)
         self.assertTrue(set(m1[0][1].keys())==set(['type']))
         self.assertTrue(m1[0][1]['type']=='name')
         cnt1 = m1[0][0]
-        response = requests.get(self.url, timeout=1)
+        response = requests.get(self.url, timeout=10)
         m2 = self.get_metric('sentence_requests_total')
         self.assertTrue(len(m2)==1)
         self.assertTrue(set(m2[0][1].keys())==set(['type']))
