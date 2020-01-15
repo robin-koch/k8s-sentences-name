@@ -21,7 +21,7 @@ var (
 )
 
 func GetName() (string) {
-	names := [5]string{"Graham", "John", "Terry", "Eric", "Michael", "Robin"}
+	names := [5]string{"Graham", "John", "Terry", "Eric", "Michael", "Robin", "Martin"}
 
 	rand.Seed(time.Now().UnixNano())
 	return names[rand.Intn(len(names))]
